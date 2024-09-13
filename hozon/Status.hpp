@@ -1,14 +1,12 @@
 #ifndef STATUS_HPP
 # define STATUS_HPP
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <cstdlib>
+#include "rubic.hpp"
+#include "Status.hpp"
 
 class	Status
 {
-	private:
+	protected:
 		int	cp[8];
 		int	co[8];
 		int	ep[12];
