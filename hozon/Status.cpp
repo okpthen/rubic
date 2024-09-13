@@ -1,4 +1,5 @@
 #include "rubic.hpp"
+#include "Status.hpp"
 
 Status::Status(){
 	for (int i = 0; i < 8 ; i ++)

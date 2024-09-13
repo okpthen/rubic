@@ -1,6 +1,5 @@
 #include "Status.hpp"
 
-
 void	Status::move_R(){
 	tmp = cp[2];
 	cp[2] = cp[6];

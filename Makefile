@@ -1,21 +1,18 @@
 
-NAME = rubic
+NAME = rubik
 DEBUG = debug
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror
+# CXXFLAGS += -std=c++98
+# CXXFLAGS += -g -fsanitize=address
 DEBUGFLAG = -g -fsanitize=address
 
-FILES = Status
+FILES = Cp Co Eo E_Com Ep Ep_Ud Ep_E PruningTable Search
 SRC = $(FILES:=.cpp)
 HEADER = $(FILES:=.hpp)
-SRC += main.cpp move.cpp
+SRC += main.cpp
 HEADER += rubic.hpp
-
-TEMPLATEFILEW = 
-TEMPLATE = $(TEMPLATEFILEW:=.tpp)
-HEADER += $(TEMPLATEFILEW:=.hpp)
-TEMPLATE +=
 
 OBJDIR = objs
 OBJ = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
@@ -46,10 +43,13 @@ re: fclean all
 echo:
 	echo $(FILES) $(SRC) $(OBJ) $(HEADER)
 
-test:
+test1:
 	@./$(NAME) "L D2 R U2 L F2 U2 L F2 R2 B2 R U' R' U2 F2 R' D B' F2"
+
+test:
+	@sh run.sh
 
 leak: $(NAME)
 	$(LEAK) ./$(NAME)
 
-.PHONY: all clean fclean re leak bonus
+.PHONY: all clean fclean re leak bonus test
