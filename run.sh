@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ARG=$(./a.out 10)
+export ARG=$(./a.out 15)
 echo "input  = $ARG"
 echo -n "result = "
 export ARG1=$(./rubik "$ARG")
