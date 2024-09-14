@@ -208,12 +208,14 @@ void	Cp::Input(std::vector<std::string> lst){
 	IndexToCp(0);
 	for (size_t i = 0; i < lst.size(); i ++)
 		MoveStr(lst[i]);
+	// print();
 }
 
 void	Cp::FinishP1(std::vector<std::string> lst){
 	for (size_t i = 0; i < lst.size(); i ++)
 		MoveStr(lst[i]);
 	input_index = CpToIndex();
+	// print();
 }
 
 void	Cp::MoveStr(std::string str){

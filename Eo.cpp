@@ -162,21 +162,50 @@ void	Eo::B3(){
 	B();
 }
 
-void	Eo::L2(){}
+void	Eo::L2(){
+	L();
+	L();
+}
 
-void	Eo::L3(){}
+void	Eo::L3(){
+	L();
+	L();
+	L();
 
-void	Eo::U2(){}
+}
 
-void	Eo::U3(){}
+void	Eo::U2(){
+	U();
+	U();
+}
 
-void	Eo::D2(){}
+void	Eo::U3(){
+	U();
+	U();
+	U();
+}
 
-void	Eo::D3(){}
+void	Eo::D2(){
+	D();
+	D();
+}
 
-void	Eo::R2(){}
+void	Eo::D3(){
+	D();
+	D();
+	D();
+}
 
-void	Eo::R3(){}
+void	Eo::R2(){
+	R();
+	R();
+}
+
+void	Eo::R3(){
+	R();
+	R();
+	R();
+}
 
 void	Eo::Input(std::vector<std::string> lst){
 	IndexToEo(0);
